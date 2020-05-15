@@ -1,5 +1,5 @@
 {
-    "name": "zhuyuzhu/yii2-authentication",
+    "name": "qimao/yii2-authentication",
     "description": "A Simple Authentication Library Based Yii2",
     "keywords": ["yii2", "authentication"],
     "type": "library",
