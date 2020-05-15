@@ -1,10 +1,10 @@
 <?php
 
 
-namespace qimao\controllers;
+namespace qimao\authentication\controllers;
 
-use qimao\traits\Auth;
-use qimao\traits\BaseController as Base;
+use qimao\authentication\traits\Auth;
+use qimao\authentication\traits\BaseController as Base;
 use yii\web\Controller;
 use Yii;
 class BaseController extends Controller
@@ -36,6 +36,6 @@ class BaseController extends Controller
 
     public function getInputValidate()
     {
-        return new \app\common\InputValidator();
+        return new \qimao\authentication\common\InputValidator();
     }
 }

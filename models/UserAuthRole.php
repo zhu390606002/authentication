@@ -1,10 +1,10 @@
 <?php
 
 
-namespace qimao\models;
+namespace qimao\authentication\models;
 
 use Yii;
-use qimao\common\AuthenticationConstant;
+use qimao\authentication\common\AuthenticationConstant;
 class UserAuthRole extends UserAuthRoleTable
 {
     static public function getUserAuthByUserId($userId)

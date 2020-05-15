@@ -1,15 +1,15 @@
 <?php
 
 
-namespace qimao\logic;
+namespace qimao\authentication\logic;
 
 use Yii;
-use qimao\models\AuthRole as daoAuthRole;
-use qimao\models\RoleAuthRelation as daoRoleAuthRelation;
-use qimao\models\UserAuthRole as daoUserAuthRole;
-use qimao\models\Auth as daoAuth;
-use qimao\common\AuthenticationConstant;
-use qimao\common\funcionts;
+use qimao\authentication\models\AuthRole as daoAuthRole;
+use qimao\authentication\models\RoleAuthRelation as daoRoleAuthRelation;
+use qimao\authentication\models\UserAuthRole as daoUserAuthRole;
+use qimao\authentication\models\Auth as daoAuth;
+use qimao\authentication\common\AuthenticationConstant;
+use qimao\authentication\common\funcionts;
 class AuthRole extends AbstractBaseLogic
 {
     const TABLE_HEADER_LIST = [];

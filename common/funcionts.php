@@ -1,5 +1,5 @@
 <?php
-namespace qimao\common;
+namespace qimao\authentication\common;
 
 class funcionts{
     static public function saveFile($path,$fileName,$data,$isAppend = false)

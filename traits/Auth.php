@@ -1,7 +1,7 @@
 <?php
 
 
-namespace qimao\traits;
+namespace qimao\authentication\traits;
 
 use Yii;
 trait Auth

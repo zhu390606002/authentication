@@ -1,9 +1,9 @@
 <?php
 
 
-namespace qimao\models;
+namespace qimao\authentication\models;
 
-use qimao\common\AuthenticationConstant;
+use qimao\authentication\common\AuthenticationConstant;
 use Yii;
 
 class RoleAuthRelation extends RoleAuthRelationTable

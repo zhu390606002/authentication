@@ -1,6 +1,6 @@
 <?php
 
-namespace qimao\models;
+namespace qimao\authentication\models;
 
 use Yii;
 
@@ -12,7 +12,7 @@ use Yii;
  * @property int $auth_id 权限id
  * @property int|null $delete_flag 是否删除 1是 0否
  */
-class RoleAuthRelationTable extends \qimao\models\BaseModel
+class RoleAuthRelationTable extends \qimao\authentication\models\BaseModel
 {
     /**
      * {@inheritdoc}

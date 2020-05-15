@@ -1,10 +1,10 @@
 <?php
 
 
-namespace qimao\common;
+namespace qimao\authentication\common;
 
 
-class InputValidator extends \app\models\BaseModel
+class InputValidator extends \qimao\authentication\models\BaseModel
 {
     /**
      * @var array 验证规则

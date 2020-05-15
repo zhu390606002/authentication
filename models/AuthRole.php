@@ -1,7 +1,7 @@
 <?php
 
 
-namespace qimao\models;
+namespace qimao\authentication\models;
 
 class AuthRole extends AuthRoleTable
 {

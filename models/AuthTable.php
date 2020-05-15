@@ -1,6 +1,6 @@
 <?php
 
-namespace qimao\models;
+namespace qimao\authentication\models;
 
 use Yii;
 
@@ -16,7 +16,7 @@ use Yii;
  * @property string $create_time 创建时间
  * @property string $update_time 更新时间
  */
-class AuthTable extends \qimao\models\BaseModel
+class AuthTable extends \qimao\authentication\models\BaseModel
 {
     /**
      * {@inheritdoc}

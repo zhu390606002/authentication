@@ -1,7 +1,7 @@
 <?php
 
 
-namespace qimao\logic;
+namespace qimao\authentication\logic;
 
 use Yii;
 abstract class AbstractBaseLogic
