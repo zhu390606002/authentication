@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\logic;
+namespace qimao\logic;
 
 use Yii;
 abstract class AbstractBaseLogic

@@ -1,5 +1,5 @@
 <?php
-namespace app\common;
+namespace qimao\common;
 
 class AuthenticationConstant{
     const AUTH_TYPE_PAGE = 0;

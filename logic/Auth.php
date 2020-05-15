@@ -1,12 +1,12 @@
 <?php
 
 
-namespace app\logic;
+namespace qimao\logic;
 
 use Yii;
-use app\models\Auth as daoAuth;
-use app\common\AuthenticationConstant;
-use app\common\funcionts;
+use qimao\models\Auth as daoAuth;
+use qimao\common\AuthenticationConstant;
+use qimao\common\funcionts;
 class Auth extends AbstractBaseLogic
 {
     public function authList()

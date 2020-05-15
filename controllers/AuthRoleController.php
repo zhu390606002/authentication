@@ -1,10 +1,10 @@
 <?php
 
 
-namespace app\controllers;
+namespace qimao\controllers;
 
 use Yii;
-use app\logic\AuthRole as logicAuthRole;
+use qimao\logic\AuthRole as logicAuthRole;
 class AuthRoleController extends BaseController
 {
     public function actionAuthRoleList()

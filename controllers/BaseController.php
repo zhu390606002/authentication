@@ -1,10 +1,10 @@
 <?php
 
 
-namespace app\controllers;
+namespace qimao\controllers;
 
-use app\traits\Auth;
-use app\traits\BaseController as Base;
+use qimao\traits\Auth;
+use qimao\traits\BaseController as Base;
 use yii\web\Controller;
 use Yii;
 class BaseController extends Controller

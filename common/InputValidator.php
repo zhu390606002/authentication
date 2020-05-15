@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\common;
+namespace qimao\common;
 
 
 class InputValidator extends \app\models\BaseModel

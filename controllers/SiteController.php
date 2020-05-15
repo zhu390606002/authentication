@@ -1,14 +1,14 @@
 <?php
 
-namespace app\controllers;
+namespace qimao\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\traits\Auth;
-use app\traits\BaseController as Base;
+use qimao\traits\Auth;
+use qimao\traits\BaseController as Base;
 
 class SiteController extends Controller
 {

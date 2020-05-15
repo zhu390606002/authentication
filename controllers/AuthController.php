@@ -1,10 +1,10 @@
 <?php
 
 
-namespace app\controllers;
+namespace qimao\controllers;
 
 use Yii;
-use app\logic\Auth as logicAuth;
+use qimao\logic\Auth as logicAuth;
 class AuthController extends BaseController
 {
     public function actionAuthList()

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace app\traits;
+namespace qimao\traits;
 
 use Yii;
-use app\common\AuthenticationConstant;
+use qimao\common\AuthenticationConstant;
 trait BaseController
 {
     /**

@@ -5,7 +5,7 @@
  * Date: 2018/8/24
  * Time: 11:04
  */
-namespace app\models;
+namespace qimao\models;
 
 class BaseModel extends \yii\db\ActiveRecord
 {
