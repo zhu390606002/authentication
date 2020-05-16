@@ -67,13 +67,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        if (!in_array($this->userInfo['uid'],$this->noAuthUser)){
-            $route = '/'. Yii::$app->request->pathInfo;
-            $code = $this->authenticate($route,$this->userInfo['uid']);
-            if ($code){
-                return $this->verifyReponse([], Yii::t('authentication/auth', 'authentication_fail_'.$code));
-            }
-        }
+//        if (!in_array($uid,$this->noAuthUser)){
+//            $route = '/'. Yii::$app->request->pathInfo;
+//            $code = $this->authenticate($route,$uid);
+//            if ($code){
+//                return $this->verifyReponse([], Yii::t('authentication/auth', 'authentication_fail_'.$code));
+//            }
+//        }
         return $this->render('index');
     }
 }
