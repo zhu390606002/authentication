@@ -19,12 +19,12 @@ class UserAuthRole extends UserAuthRoleTable
 
     static public function updateUserAuthRoleByRoleId($roleId)
     {
-        return Yii::$app->db->createCommand()->update('user_auth_role', ['delete_flag' => AuthenticationConstant::IS_DELETE_TRUE], 'role_id in (:role_id)',[':role_id'=>implode(',',$roleId)])->execute();
+        return Yii::$app->db->createCommand('update user_auth_role set delete_flag = '.AuthenticationConstant::IS_DELETE_TRUE.' where role_id in ('.implode(',',$roleId).')')->execute();
     }
 
     static public function updateUserAuthRoleByUserId($userId)
     {
-        return Yii::$app->db->createCommand()->update('user_auth_role', ['delete_flag' => AuthenticationConstant::IS_DELETE_TRUE], 'user_id in (:user_id)',[':user_id'=>implode(',',$userId)])->execute();
+        return Yii::$app->db->createCommand('update user_auth_role set delete_flag = '.AuthenticationConstant::IS_DELETE_TRUE.' where user_id in ('.implode(',',$userId).')')->execute();
     }
 
     static public function batchInsertByUserAndRole($insert)

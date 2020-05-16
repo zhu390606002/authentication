@@ -122,6 +122,12 @@ traits：实现具体校验逻辑的方法
                    ],
                ],
            ],
+   'urlManager' => [
+               'enablePrettyUrl' => true,
+               'showScriptName' => false,
+               'rules' => [
+               ],
+           ],
    ```
 
    在项目合适的位置增加路径配置，如bootstrap.php或者入口php文件
@@ -134,7 +140,7 @@ traits：实现具体校验逻辑的方法
 
 5. 将vendor/qimao/authentication/controllers下的文件复制到项目应用中的controllers路径下，并修改所有文件的命名空间为app/controllers
 
-6. 修改BaseController.php实现接口权限控制，项目其他接口需继承该类，也可以修改该类的继承类实现前置校验
+6. 修改BaseController.php实现接口权限控制，项目其他接口需继承该类，也可以修改该类的继承类实现前置校验。刚安装时实例代码进行了注释，目的是在使用接口生成权限数据前不进行权限校验，因为此时数据表中尚无权限数据。使用时需要根据实际项目情况修改实例代码，实现权限管理。
 
    ```php
       //实例代码，uid为当前用户id，noAuthUser为无需校验的用户id集合
@@ -188,4 +194,4 @@ traits：实现具体校验逻辑的方法
            ],
    ```
 
-   
+8. 配置完以上步骤，先将BaseController.php和SiteController.php控制器中的权限校验代码关闭，然后调用接口生成权限数据，之后再开启权限校验

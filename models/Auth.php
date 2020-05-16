@@ -37,6 +37,6 @@ class Auth extends AuthTable
 
     static public function updateAuthById($authId)
     {
-        return Yii::$app->db->createCommand()->update('auth', ['delete_flag' => AuthenticationConstant::IS_DELETE_TRUE], 'auth_id in (:auth_id)',[':auth_id'=>implode(',',$authId)])->execute();
+        return Yii::$app->db->createCommand('update auth set delete_flag = '.AuthenticationConstant::IS_DELETE_TRUE.' where auth_id in ('.implode(',',$authId).')')->execute();
     }
 }
