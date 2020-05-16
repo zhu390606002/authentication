@@ -114,7 +114,10 @@ traits：实现具体校验逻辑的方法
 4. 修改配置文件，增加配置
 
    ```php
-   'i18n' => [
+   'language' => 'zh-CN',
+   'components' => [
+       	//...其他配置
+           'i18n' => [
                'translations' => [
                    '*' => [
                        'class'    => 'yii\i18n\PhpMessageSource',
@@ -122,12 +125,19 @@ traits：实现具体校验逻辑的方法
                    ],
                ],
            ],
-   'urlManager' => [
+           'urlManager' => [
                'enablePrettyUrl' => true,
+               //'enableStrictParsing' => true,
                'showScriptName' => false,
                'rules' => [
+                   'GET <controller:(admin)>/<action:[\w-]+>' => 'site/index',
+                   'GET <modules:(admin)>/<controller:[\w-]+>/<action:[\w-]+>' => 'site/index',
+                   'GET <modules:(admin)>/<module:[\w-]+>/<controller:[\w-]+>/<action:[\w-]+>' => 'site/index',
+                   'GET <modules:(admin)>/<module:[\w-]+>/<controller:[\w-]+>/<action:[\w-]+>/<action1:[\w-]+>' => 'site/index',
+                   'GET <modules:(admin)>/<module:[\w-]+>/<controller:[\w-]+>/<action:[\w-]+>/<action1:[\w-]+>/<action2:[\w-]+>' => 'site/index',
                ],
            ],
+       ],
    ```
 
    在项目合适的位置增加路径配置，如bootstrap.php或者入口php文件
