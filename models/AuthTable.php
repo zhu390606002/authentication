@@ -23,7 +23,7 @@ class AuthTable extends \qimao\authentication\models\BaseModel
      */
     public static function tableName()
     {
-        return 'auth';
+        return 'qma_auth';
     }
 
     /**

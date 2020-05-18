@@ -5,7 +5,7 @@
 ## 数据结构
 
 ```mysql
-CREATE TABLE `auth` (
+CREATE TABLE `qma_auth` (
   `auth_id` int(10) unsigned NOT NULL AUTO_INCREMENT comment '权限id',
   `name` varchar(50) NOT NULL default '' comment '权限名称',
   `url` varchar(255) NOT NULL default '' comment '权限url',
@@ -17,7 +17,7 @@ CREATE TABLE `auth` (
   PRIMARY KEY (`auth_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 comment '权限表';
 
-CREATE TABLE `auth_role` (
+CREATE TABLE `qma_auth_role` (
   `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT comment '角色id',
   `name` varchar(50) NOT NULL default '' comment '角色名称',
   `delete_flag` tinyint(1) DEFAULT '0' COMMENT '是否删除 1是 0否',
@@ -26,7 +26,7 @@ CREATE TABLE `auth_role` (
   PRIMARY KEY (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 comment '权限角色表';
 
-CREATE TABLE `role_auth_relation` (
+CREATE TABLE `qma_role_auth_relation` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `role_id` int(10) NOT NULL DEFAULT '0' COMMENT '角色id',
   `auth_id` int(10) NOT NULL DEFAULT '0' COMMENT '权限id',
@@ -34,7 +34,7 @@ CREATE TABLE `role_auth_relation` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 comment '角色权限关联表';
 
-CREATE TABLE `user_auth_role` (
+CREATE TABLE `qma_user_auth_role` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) NOT NULL DEFAULT '0' COMMENT '用户id',
   `role_id` int(10) NOT NULL DEFAULT '0' COMMENT '权限角色id',

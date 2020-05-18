@@ -19,7 +19,7 @@ class RoleAuthRelationTable extends \qimao\authentication\models\BaseModel
      */
     public static function tableName()
     {
-        return 'role_auth_relation';
+        return 'qma_role_auth_relation';
     }
 
     /**

@@ -19,7 +19,7 @@ class UserAuthRoleTable extends \qimao\authentication\models\BaseModel
      */
     public static function tableName()
     {
-        return 'user_auth_role';
+        return 'qma_user_auth_role';
     }
 
     /**
