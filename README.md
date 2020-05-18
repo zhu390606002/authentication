@@ -45,13 +45,13 @@ CREATE TABLE `qma_user_auth_role` (
 
 安装时需要在数据库中生成以上数据表
 
-auth：存储具体的权限信息，分为接口权限和页面权限
+qma_auth：存储具体的权限信息，分为接口权限和页面权限
 
-auth_role：存储角色信息
+qma_auth_role：存储角色信息
 
-role_auth_relation：存储角色与权限的绑定关系
+qma_role_auth_relation：存储角色与权限的绑定关系
 
-user_auth_role：存储用户与角色的绑定关系
+qma_user_auth_role：存储用户与角色的绑定关系
 
 ## 目录
 
@@ -148,7 +148,7 @@ traits：实现具体校验逻辑的方法
 
    
 
-5. 将vendor/qimao/authentication/controllers下的文件复制到项目应用中的controllers路径下，并修改所有文件的命名空间为app/controllers
+5. 将vendor/qimao/authentication/controllers下的文件复制到项目应用中的controllers路径下，并修改所有文件的命名空间为项目控制器的命名空间
 
 6. 修改BaseController.php实现接口权限控制，项目其他接口需继承该类，也可以修改该类的继承类实现前置校验。刚安装时实例代码进行了注释，目的是在使用接口生成权限数据前不进行权限校验，因为此时数据表中尚无权限数据。使用时需要根据实际项目情况修改实例代码，实现权限管理。
 
